@@ -1,15 +1,14 @@
 # Object Detection with YOLOv8: Peanut Recognition Project 🥜
-이 프로젝트는 YOLOv8 모델을 사용하여 저의 강아지인 땅콩(Peanut) 객체를 탐지하는 것을 목표로 합니다. 
-YOLOv8 모델을 학습하고, 훈련된 모델로 새로운 이미지와 동영상에서 땅콩을 인식하는 과정을 담고 있습니다.
+이 프로젝트는 영상 속에서 저의 강아지인 **땅콩이(Peanut)** 객체의 위치를 찾고, 그 위치를 기반으로 땅콩이 개별 사진을 얻는 것을 목표로 합니다.
+**roboflow**를 사용하여 라벨링한 812개의 이미지 데이터를 **YOLOv8** 모델로 학습합니다. 훈련된 모델은 새로운 이미지와 동영상에서 땅콩이를 인식하는 과정을 담고 있습니다.  
 
 **>>노트북 바로가기 [Click!](https://colab.research.google.com/github/xo0ol/Train_YOLO_Peanut/blob/main/Object_Detection_Yolov8_Peanut.ipynb)**
 ___
-## 🎥 Prediction Result Video
+## 🎥 Prediction Result
 이 프로젝트에서 훈련된 모델로 땅콩을 탐지한 결과 영상입니다.
 ___
 ## Overview
-이 프로젝트는 YOLO 모델 학습 및 배포 과정을 전체적으로 이해하기 위해 진행되었습니다. 
-다음의 주요 단계를 포함합니다.
+
 * 모델 학습용 데이터 준비: <RoboFlow 데이터 라벨링>
   - Roboflow를 사용해 라벨링된 총 812개의 땅콩 이미지 데이터를 준비했습니다.
 <p align="center">
@@ -20,7 +19,7 @@ ___
 
 * Train Test 데이터 분할 : 오픈소스 사용
   - 학습용 데이터를 Train-Test로 분할하기 위한 작업과, Yolov8 모델 학습을 위한 data.yaml 파일 생성을 위한 소스코드는 EdjeElectronics의 GitHub 저장소에서 가져왔습니다.
-  - 아래 References에서 확인하실 수 있습니다.
+  - 참고 자료는 아래 <📚 References>에서 확인하실 수 있습니다.
     
 * YOLOv8 모델 훈련
   - 준비된 데이터셋을 바탕으로 YOLOv8 모델을 훈련했습니다. 훈련 정보는 다음과 같습니다.
