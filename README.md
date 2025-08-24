@@ -7,9 +7,6 @@ YOLOv8 모델을 학습하고, 훈련된 모델로 새로운 이미지와 동영
 ## 🎥 Prediction Result Video
 이 프로젝트에서 훈련된 모델로 땅콩을 탐지한 결과 영상입니다.
 
-## Project Details
-For details of this project please check 
-
 ## Overview
 이 프로젝트는 YOLO 모델 학습 및 배포 과정을 전체적으로 이해하기 위해 진행되었습니다. 
 다음의 주요 단계를 포함합니다.
@@ -21,7 +18,6 @@ data.yaml 생성|YOLOv8 모델 학습을 위해 데이터 경로와 클래스 �
 YOLOv8 모델 훈련|준비된 데이터셋을 바탕으로 YOLOv8 모델을 훈련했습니다.
 결과 확인|훈련된 모델의 성능을 평가하고, 새로운 데이터에 대한 예측을 수행했습니다.
 동영상 객체 탐지|훈련된 모델을 사용해 peanut_test_video.mp4 영상에서 땅콩을 탐지하고, 결과 동영상을 생성했습니다.
-
 
 ## 📚 References
 이 프로젝트는 아래의 오픈 소스 프로젝트와 튜토리얼을 기반으로 제작되었습니다.
