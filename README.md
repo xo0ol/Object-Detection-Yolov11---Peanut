@@ -18,7 +18,7 @@ ___
     - 모델 훈련에 필요한 충분한 양의 땅콩이 이미지를 확보하기 위해, 직접 촬영한 동영상에서 OpenCV(cv2) 라이브러리를 활용하여 프레임 단위로 이미지를 추출했습니다.
       이 과정을 통해 다양한 각도와 배경을 가진 이미지 데이터를 효과적으로 확보할 수 있었습니다.
 
-      >모델 학습을 위한 데이터 증강 과정에서 활용된 동영상 프레임 추출 코드는 [video_to_frames.py](https://github.com/xo0ol/Object-Detection-Yolov11---Peanut/blob/main/src/video_to_frames.py)를 사용했습니다.
+      >**모델 학습을 위한 데이터 증강 과정에서 활용된 동영상 프레임 추출 코드는 [<video_to_frames.py>](https://github.com/xo0ol/Object-Detection-Yolov11---Peanut/blob/main/src/video_to_frames.py)를 사용했습니다.**
     
   - **라벨링**
     - [Roboflow](https://roboflow.com/)를 사용하여 추출된 이미지와 추가 수집된 이미지를 포함한 총 812개의 땅콩이 이미지 데이터를 직접 라벨링하여 준비했습니다.
@@ -30,18 +30,17 @@ ___
 
 ### 2. **Train Test 데이터 분할 및 data.yaml 파일 생성 : 오픈소스 사용**
   - 학습용 데이터를 Train-Test로 분할하기 위한 작업과, Yolov11 모델 학습에 필요한 data.yaml 파일을 생성하기 위해서 **EdjeElectronics의 GitHub 저장소**에 공유된 소스코드를 사용했습니다.
-  - 참고 자료는 아래 **[📚 References](#-references)** 에서 확인하실 수 있습니다. 
+  - 참고 자료는 아래 **[<📚 References>](#-references)** 에서 확인하실 수 있습니다. 
     
 ### 3. **YOLOv11 모델 훈련**
   - 준비된 데이터셋을 바탕으로 YOLOv11의 경량 버전인 Yolo11s 훈련을 시작합니다.
   - 훈련 환경: Google Colab
-  - 하이퍼파라미터
-    |Hyperparameter|Details|
-    | :------------- | :--- |
-    |Epoch|50|
-    |Batch Size|8|
-    |Image Size|640|
-
+    
+    ```python
+    !pip install ultralytics
+    !yolo detect train data=/content/data.yaml model=yolo11s.pt epochs=50 imgsz=640 batch=8 
+    ```
+    
 ### 4. **훈련 결과**
   - 모델 훈련 후 반환된 results.png 파일을 통해 손실(loss) 감소 추이와 정밀도(precision) 및 재현율(recall)을 확인할 수 있습니다.
   - 모델은 훈련 초반부터 train loss와 validation loss를 빠르게 감소시켰으며, 약 40 에포크 시점에서 손실이 최저치에 근접했습니다.
@@ -57,8 +56,13 @@ ___
   - 모델은 사진 속 땅콩이 객체를 0.71의 신뢰도로 탐지하며, 훈련 데이터 외의 환경에서도 좋은 성능을 보였습니다.
     <img src="https://github.com/xo0ol/Object-Detection-Yolov11---Peanut/blob/ea377651e7a16d0a23dd2ba72cbdc9cb8066ad4e/images/prediction.png" width="300">
 
-### END!
-  - 이제 이 훈련된 모델을 활용하여, 새로운 영상에서 땅콩이 객체를 탐지하고 예측된 바운딩 박스에 맞춰 이미지를 잘라내는 자동화된 데이터 추출 작업을 진행합니다.
+### **END. 땅콩이 이미지 추출**
+  - 훈련된 모델을 활용하여, 동영상에서 땅콩이 객체를 탐지하고, 각 프레임에서 탐지된 객체를 바운딩 박스에 맞춰 추출하여 output 폴더에 저장했습니다.
+    >**이 과정은 [<extract_objects_from_video.py>](https://github.com/xo0ol/Object-Detection-Yolov11---Peanut/blob/main/src/extract_objects_from_video.py) 스크립트를 통해 진행하였습니다.**
+      ```python
+      # !python extract_objects_from_video.py <model path> <video path> <output_dir> <confidence_threshold>
+      !python extract_objects_from_video.py /content/yolov11_peanut_e50_b8.pt /content/peanut_test_video.mp4 /content/peanut_test_video_output 0.5
+      ```
   - 추출된 결과는 프로젝트 상단의 [🎥 예측 결과 (Prediction Result)](#-%EC%98%88%EC%B8%A1-%EA%B2%B0%EA%B3%BC-prediction-result) 섹션에서 확인하실 수 있습니다.
 ___
 ## 📚 References
