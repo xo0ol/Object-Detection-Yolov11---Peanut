@@ -1,17 +1,16 @@
-# Object Detection with YOLOv11: Peanut Recognition Project 🥜
-이 프로젝트는 영상 속 제 강아지인 **땅콩이(Peanut)** 의 위치를 탐지하고, 그 위치를 기반으로 땅콩이의 개별 이미지를 추출하는 것을 목표로 합니다. 
-**Roboflow**를 사용하여 라벨링한 812개의 이미지 데이터를 **Yolov11** 모델로 학습시켰으며, 훈련된 모델은 새로운 이미지와 동영상에서 땅콩이를 정확하게 인식합니다.
+# Object Detection with YOLOv11: Peanut Recognition 🥜
+영상 속 제 강아지인 **땅콩이(Peanut)** 의 위치를 탐지하고, 그 위치를 기반으로 땅콩이의 개별 이미지를 추출하는 것을 목표로 합니다. 
 
-**>>노트북 바로가기 [Click!](https://colab.research.google.com/github/xo0ol/Train_YOLO_Peanut/blob/main/Object_Detection_Yolov8_Peanut.ipynb)**
+**Roboflow**를 사용하여 라벨링한 812개의 이미지 데이터를 **Yolov11** 모델로 학습시켰으며, 훈련된 모델은 새로운 이미지와 동영상에서 땅콩이를 정확하게 인식합니다.
 ___
-## 🎥 예측 결과 (Prediction Result)
+## 🎥 Prediction Result
 <p align="center">
   <img src="https://github.com/xo0ol/Object-Detection-Yolov11---Peanut/blob/ea377651e7a16d0a23dd2ba72cbdc9cb8066ad4e/images/peanut_test_video_output_images.png" width="400" />
 </p>
 
 ___
 
-## 📝 프로젝트 개요 (Overview)
+## 📝 Overview
 
 ### 1. **모델 학습용 데이터 준비: <RoboFlow 데이터 라벨링>**
   - **데이터 획득 및 증강**
