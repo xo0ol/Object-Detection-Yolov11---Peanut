@@ -1,7 +1,6 @@
-# Object Detection with YOLOv11: Peanut Recognition 🥜
-영상 속 제 강아지인 **땅콩이(Peanut)** 의 위치를 탐지하고, 그 위치를 기반으로 땅콩이의 개별 이미지를 추출하는 것을 목표로 합니다. 
-
-**Roboflow**를 사용하여 라벨링한 812개의 이미지 데이터를 **Yolov11** 모델로 학습시켰으며, 훈련된 모델은 새로운 이미지와 동영상에서 땅콩이를 정확하게 인식합니다.
+# Object Detection with YOLOv11: Peanut Recognition
+* 영상 속 제 강아지인 **땅콩이(Peanut)** 의 위치를 탐지하고 그 위치를 기반으로 땅콩이의 개별 이미지를 추출하는 것을 목표로 합니다. 
+* **Roboflow**를 사용하여 라벨링한 812개의 이미지 데이터를 **Yolov11** 모델로 학습시켰으며, 훈련된 모델은 새로운 이미지와 동영상에서 땅콩이를 정확하게 인식합니다.
 ___
 ## 🎥 Prediction Result
 <p align="center">
