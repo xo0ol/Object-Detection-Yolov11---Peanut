@@ -21,9 +21,9 @@ ___
   - **라벨링**
     - [Roboflow](https://roboflow.com/)를 사용하여 추출된 이미지와 추가 수집된 이미지를 포함한 총 812개의 땅콩이 이미지 데이터를 직접 라벨링하여 준비했습니다.
 <p align="center">
-  <img src="https://github.com/xo0ol/Train_YOLO_Peanut/blob/e7c292095a768c6384387aab9192d0becc7fe80d/images/robo_1.png" width="400" />
-  <img src="https://github.com/xo0ol/Train_YOLO_Peanut/blob/e7c292095a768c6384387aab9192d0becc7fe80d/images/robo_3.png" width="400" />
-  <img src="https://github.com/xo0ol/Train_YOLO_Peanut/blob/e7c292095a768c6384387aab9192d0becc7fe80d/images/robo_2.png" width="400" />
+  <img src="https://github.com/xo0ol/Train_YOLO_Peanut/blob/e7c292095a768c6384387aab9192d0becc7fe80d/images/robo_1.png" width="800" />
+  <img src="https://github.com/xo0ol/Train_YOLO_Peanut/blob/e7c292095a768c6384387aab9192d0becc7fe80d/images/robo_3.png" width="800" />
+  <img src="https://github.com/xo0ol/Train_YOLO_Peanut/blob/e7c292095a768c6384387aab9192d0becc7fe80d/images/robo_2.png" width="800" />
 </p>
 
 ### 2. **Train Test 데이터 분할 및 data.yaml 파일 생성 : 오픈소스 사용**
