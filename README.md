@@ -4,8 +4,8 @@
 ___
 ## 🎥 Prediction Result
 <p align="center">
-  <img src="https://github.com/xo0ol/Object-Detection-Yolov11---Peanut/blob/ea377651e7a16d0a23dd2ba72cbdc9cb8066ad4e/images/peanut_test_video_output_images.png" width="600" />
   <img src="https://github.com/xo0ol/Object-Detection-Yolov11---Peanut/blob/44aa5602a6e0e0d29aa253dc9fe0fe4104ee0607/images/output_gif.gif" width="600" />
+  <img src="https://github.com/xo0ol/Object-Detection-Yolov11---Peanut/blob/ea377651e7a16d0a23dd2ba72cbdc9cb8066ad4e/images/peanut_test_video_output_images.png" width="600" />
 </p>
 
 ___
