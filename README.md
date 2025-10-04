@@ -4,7 +4,8 @@
 ___
 ## 🎥 Prediction Result
 <p align="center">
-  <img src="https://github.com/xo0ol/Object-Detection-Yolov11---Peanut/blob/ea377651e7a16d0a23dd2ba72cbdc9cb8066ad4e/images/peanut_test_video_output_images.png" width="400" />
+  <img src="https://github.com/xo0ol/Object-Detection-Yolov11---Peanut/blob/ea377651e7a16d0a23dd2ba72cbdc9cb8066ad4e/images/peanut_test_video_output_images.png" width="600" />
+  <img src="https://github.com/xo0ol/Object-Detection-Yolov11---Peanut/blob/44aa5602a6e0e0d29aa253dc9fe0fe4104ee0607/images/output_gif.gif" width="600" />
 </p>
 
 ___
@@ -45,8 +46,8 @@ ___
   - 동시에 모델의 정밀도와 재현율은 40 에포크 이전에 이미 1.0에 도달했습니다. 결과적으로 모델은 주어진 데이터셋에서 단일 클래스의 특징을 효과적으로 학습했습니다.
   - 아래 이미지는 모델 훈련 후 반환된 **result.png**와 **val_batch_pred.jpg** 입니다.
 <p align="center">
-  <img src="https://github.com/xo0ol/Train_YOLO_Peanut/blob/b980a71acd2207d4632fcdd3178b4d71133f0b7b/images/results.png" width="600" />
-  <img src="https://github.com/xo0ol/Train_YOLO_Peanut/blob/b980a71acd2207d4632fcdd3178b4d71133f0b7b/images/val_batch2_pred.jpg" width="300" />
+  <img src="https://github.com/xo0ol/Train_YOLO_Peanut/blob/b980a71acd2207d4632fcdd3178b4d71133f0b7b/images/results.png" width="800" />
+  <img src="https://github.com/xo0ol/Train_YOLO_Peanut/blob/b980a71acd2207d4632fcdd3178b4d71133f0b7b/images/val_batch2_pred.jpg" width="500" />
 </p>
 
 ### 5. **새 데이터 예측 및 검증**
