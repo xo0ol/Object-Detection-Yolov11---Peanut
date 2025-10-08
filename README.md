@@ -55,14 +55,27 @@ ___
   - 모델은 사진 속 땅콩이 객체를 0.71의 신뢰도로 탐지하며, 훈련 데이터 외의 환경에서도 좋은 성능을 보였습니다.
     <img src="https://github.com/xo0ol/Object-Detection-Yolov11---Peanut/blob/ea377651e7a16d0a23dd2ba72cbdc9cb8066ad4e/images/prediction.png" width="300">
 
+
 ### **END. 땅콩이 이미지 추출**
-  - 훈련된 모델을 활용하여, 동영상에서 땅콩이 객체를 탐지하고, 각 프레임에서 탐지된 객체를 바운딩 박스에 맞춰 추출하여 output 폴더에 저장했습니다.
-    >**이 과정은 [<extract_objects_from_video.py>](https://github.com/xo0ol/Object-Detection-Yolov11---Peanut/blob/main/src/extract_objects_from_video.py) 스크립트를 통해 진행하였습니다.**
+  - 훈련된 모델을 활용하여 동영상에서 땅콩이 객체를 탐지하고, 각 프레임에서 탐지된 객체를 바운딩 박스에 맞춰 추출하여 새 비디오를 작성합니다.
+    > [<extract_objects_from_video.py>](https://github.com/xo0ol/Object-Detection-Yolov11---Peanut/blob/main/src/extract_objects_from_video.py) 스크립트 실행
+    ```python
+    # !python create_annotated_video.py <model_path> <video_path> <output_path>
+    !python create_annotated_video.py {model_path} {video_path} {output_path}
+    ```
+    <p align="center">
+      <img src="https://github.com/xo0ol/Object-Detection-Yolov11---Peanut/blob/44aa5602a6e0e0d29aa253dc9fe0fe4104ee0607/images/output_gif.gif" width="600" />
+    </p>
+
+  - 바운딩 박스에 맞춰 프레임별 개별 이미지를 추출합니다.
+    >[<extract_objects_from_video.py>](https://github.com/xo0ol/Object-Detection-Yolov11---Peanut/blob/main/src/extract_objects_from_video.py) 스크립트 실행
       ```python
       # !python extract_objects_from_video.py <model path> <video path> <output_dir> <confidence_threshold>
       !python extract_objects_from_video.py /content/yolov11_peanut_e50_b8.pt /content/peanut_test_video.mp4 /content/peanut_test_video_output 0.5
       ```
-  - 추출된 결과는 프로젝트 상단의 [🎥 예측 결과 (Prediction Result)](#-%EC%98%88%EC%B8%A1-%EA%B2%B0%EA%B3%BC-prediction-result) 섹션에서 확인하실 수 있습니다.
+      <p align="center">
+        <img src="https://github.com/xo0ol/Object-Detection-Yolov11---Peanut/blob/ea377651e7a16d0a23dd2ba72cbdc9cb8066ad4e/images/peanut_test_video_output_images.png" width="600" />
+      </p>
 ___
 ## 📚 References
 이 프로젝트는 아래의 오픈소스 프로젝트와 튜토리얼을 기반으로 제작되었습니다.
